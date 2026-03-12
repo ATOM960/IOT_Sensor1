@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Monitoring Tanah</title>
+    <!-- Menggunakan Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Menggunakan Chart.js untuk Grafik -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Smart Farming Monitor</h1>
+            <p>Real-time Data Sensor Tanah</p>
+        </header>
+
+        <!-- Kartu Data Utama -->
+        <div class="dashboard-grid">
+            <!-- Kartu Kelembaban -->
+            <div class="card">
+                <h3>Kelembaban Tanah</h3>
+                <div class="value" id="moisture-val">--</div>
+                <div class="unit">Persen (%)</div>
+            </div>
+
+            <!-- Kartu Suhu -->
+            <div class="card">
+                <h3>Suhu Tanah</h3>
+                <div class="value" id="temp-val">--</div>
+                <div class="unit">Derajat Celcius</div>
+            </div>
+
+            <!-- Kartu pH -->
+            <div class="card">
+                <h3>Nilai pH</h3>
+                <div class="value" id="ph-val">--</div>
+                <div class="unit">pH</div>
+            </div>
+        </div>
+
+        <!-- Grafik -->
+        <div class="chart-container">
+            <canvas id="sensorChart"></canvas>
+        </div>
+
+        <div class="last-updated">
+            Data terakhir diperbarui: <span id="time">--:--:--</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+:root {
+    --bg-color: #1a1a2e;
+    --card-color: #16213e;
+    --accent-color: #0f3460;
+    --text-color: #e94560;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--white);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Grid Layout untuk Kartu Data */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: var(--card-color);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #aeb8c4;
+}
+
+.card .value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.card .unit {
+    font-size: 1rem;
+    color: #aeb8c4;
+}
+
+/* Warna Indikator */
+.status-good { color: #4cd137; }
+.status-warning { color: #fbc531; }
+.status-danger { color: #e84118; }
+
+/* Area Grafik */
+.chart-container {
+    background-color: var(--card-color);
+    padding: 20px;
+    border-radius: 15px;
+    height: 300px;
+}
+
+.last-updated {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #777;
+}
